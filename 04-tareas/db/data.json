@@ -1,0 +1,32 @@
+[
+	{
+		"id": "45d79450-b308-42d9-acdf-ef57a505cd51",
+		"description": "Buscar la gema del alma",
+		"finishDate": "2023-04-26T02:03:22.206Z"
+	},
+	{
+		"id": "597262e7-7307-47a4-adea-0098b602edde",
+		"description": "Buscar la gema del poder",
+		"finishDate": null
+	},
+	{
+		"id": "a5ac7cd2-e7cc-425f-9d98-ede34645e55a",
+		"description": "Buscar la gema del tiempo",
+		"finishDate": "2023-04-26T02:03:22.206Z"
+	},
+	{
+		"id": "e44bfd56-5ea5-45a1-97d7-5107ce87a657",
+		"description": "Buscar la gema del espacio",
+		"finishDate": null
+	},
+	{
+		"id": "30ec14a4-9b2c-42df-83b0-02088f506071",
+		"description": "Buscar la gema de la mente",
+		"finishDate": "2023-04-26T02:03:22.206Z"
+	},
+	{
+		"id": "e87e0b9e-bf6e-4350-9b11-1d6b2dd4d5d1",
+		"description": "Buscar la gema de la realidad",
+		"finishDate": null
+	}
+]
