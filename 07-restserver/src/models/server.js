@@ -1,7 +1,8 @@
 import express from 'express'
 import cors from 'cors'
-import { userRouter } from '../routes/usersRoutes.js'
+import { userRouter } from '../routes/usersRouter.js'
 import { dbConnection } from '../database/configDB.js'
+import { authRouter } from '../routes/authRouter.js'
 
 export class Server {
     constructor() {
@@ -23,6 +24,7 @@ export class Server {
 
     routes = () => {
         this.app.use('/api/users', userRouter)
+        this.app.use('/api/auth', authRouter)
     }
 
     listener = () => {

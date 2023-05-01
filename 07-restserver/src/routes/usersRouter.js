@@ -3,6 +3,9 @@ import { check } from 'express-validator'
 import { deleteUser, getUsers, getUser, postUser, putUser } from '../controllers/usersController.js'
 import { itemsValidator } from '../middlewares/itemsValidator.js'
 import { emailExists, roleExists, userExistsById } from '../helpers/dbValidators.js'
+import { validateJWT } from '../middlewares/validateJWT.js'
+import { validateAdminRole } from '../middlewares/validateAdminRole.js'
+import { validateRoles } from '../middlewares/validateRoles.js'
 
 export const userRouter = Router()
 
@@ -49,6 +52,9 @@ userRouter.put(
 userRouter.delete(
     '/:id',
     [
+        validateJWT,
+        // validateAdminRole,
+        validateRoles(['ADMIN_ROLE', 'VENTAS_ROLE']),
         check('id', 'El id debe ser un id de mongo').isMongoId(),
         check('id').custom(userExistsById),
         itemsValidator
