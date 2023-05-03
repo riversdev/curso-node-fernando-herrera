@@ -29,3 +29,9 @@ export const productExistsById = async (id = '') => {
 
     if (!alreadyExists || alreadyExists.isDeleted) throw new Error(`El producto con el id ${id} no existe !`)
 }
+
+export const checkCollections = (collection = '', validCollections = []) => {
+    if (!validCollections.includes(collection)) throw new Error(`La collection no es una de ${validCollections} !`)
+
+    return true
+}

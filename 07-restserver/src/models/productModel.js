@@ -22,6 +22,9 @@ const productSchema = Schema({
         type: Boolean,
         default: true
     },
+    img: {
+        type: String,
+    },
     isDeleted: {
         type: Boolean,
         default: false,
